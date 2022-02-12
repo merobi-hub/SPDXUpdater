@@ -11,6 +11,18 @@ def insert_license():
             path = os.path.join(root, f)
             if f == 'spdx-convert.py':
                 continue
+            elif '.data' in f:
+                continue
+            elif '.png' in f:
+                continue
+            elif '.jar' in f:
+                continue
+            elif '.' not in f:
+                continue
+            elif '.pack' in f:
+                continue
+            elif '.idx' in f:
+                continue
             else:
                 paths.append(path)
 
@@ -22,7 +34,7 @@ def insert_license():
                 if 'Licensed under' in str_contents:
                     beg = str_contents.find('Licensed under')
                     end = str_contents.find('limitations under the License.') + 29
-                    str_contents = str_contents[0:beg] + 'SPDX-License-Identifier: Apache-2.0' + str_contents[end:-1]
+                    str_contents = str_contents[0:beg] + 'SPDX-License-Identifier: Apache-2.0' + str_contents[end:-1] + '\n'
                     with open(p, 'w') as t:
                         t.write(str_contents)
                 else:
