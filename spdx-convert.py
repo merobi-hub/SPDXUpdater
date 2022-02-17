@@ -5,10 +5,10 @@ def insert_license():
     import os
 
     # Create an array of paths mirroring structure of current directory
+    # while ignoring this script and problematic file types
     for root, dirs, files in os.walk('.', topdown=False):
         paths = []
         for f in files:
-            path = os.path.join(root, f)
             if f == 'spdx-convert.py':
                 continue
             elif '.data' in f:
@@ -24,6 +24,7 @@ def insert_license():
             elif '.idx' in f:
                 continue
             else:
+                path = os.path.join(root, f)
                 paths.append(path)
 
         # Iterate through file paths, replacing block license text if found or 
