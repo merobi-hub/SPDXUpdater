@@ -19,11 +19,19 @@ Apache 2.0
 
 ## Supported File Types
 
-The files types currently supported:
 .java
 .py
 .md
 .txt
+
+## Excluded File Types
+
+.data
+.jar
+.png
+.pack
+.idx
+.html
 
 ## How to Use
 
