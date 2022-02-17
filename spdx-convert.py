@@ -23,6 +23,8 @@ def insert_license():
                 continue
             elif '.idx' in f:
                 continue
+            elif '.html' in f:
+                continue
             else:
                 path = os.path.join(root, f)
                 paths.append(path)
