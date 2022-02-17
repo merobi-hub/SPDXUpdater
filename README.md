@@ -35,7 +35,7 @@ Apache 2.0
 
 ## How to Use
 
-Copy the spdx-convert.py file to the root directory of your project. Then, cd into the root directory, and execute the script 
+Copy the spdx-convert.py file to the root directory of your project. Then, cd into the root directory and execute the script 
 with Python 3.
 
 ## Contributors
