@@ -25,6 +25,8 @@ def insert_license():
                 continue
             elif '.html' in f:
                 continue
+            elif '.csv' in f:
+                continue
             else:
                 path = os.path.join(root, f)
                 paths.append(path)

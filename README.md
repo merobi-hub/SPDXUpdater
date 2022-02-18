@@ -32,6 +32,7 @@ Apache 2.0
 .pack
 .idx
 .html
+.csv
 
 ## How to Use
 
