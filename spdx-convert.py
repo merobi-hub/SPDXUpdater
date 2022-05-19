@@ -53,6 +53,8 @@ def insert_license():
                             contents.insert(0, '<!-- SPDX-License-Identifier: Apache-2.0 -->\n\n')
                         elif p[-3:] == 'txt':
                             contents.insert(0, 'SPDX-License-Identifier: Apache-2.0\n\n')
+                        elif p[-2:] == 'rs':
+                            contents.insert(0, '// SPDX-License-Identifier: Apache-2.0\n\n')
                     with open(p, 'w') as t:
                         contents = ''.join(contents)
                         t.write(contents)
