@@ -23,6 +23,7 @@ Apache 2.0
 .py
 .md
 .txt
+.rs
 
 ## Excluded File Types
 
