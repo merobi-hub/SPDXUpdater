@@ -6,8 +6,8 @@ def insert_license():
 
     # Create an array of paths mirroring structure of current directory
     # while ignoring this script and problematic file types
-    for root, dirs, files in os.walk('.', topdown=False):
-        paths = []
+    paths = []
+    for root, dirs, files in os.walk('.', topdown=True):
         for f in files:
             if f == 'spdx-convert.py':
                 continue
